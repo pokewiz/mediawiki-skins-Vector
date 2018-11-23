@@ -1,0 +1,85 @@
+/* Netbar */
+div#netbar {
+	background:#FFFFFF;
+	border-bottom:1px solid #D8D8D8;
+	color:#000;
+	font-size:12px !important;
+	height:30px;
+	left:0;
+	position:absolute;
+	top:-30px;
+	width:100%;
+	z-index:1001
+}
+#netbar .netbar-flex {
+	align-content:center;
+	align-items:center;
+	display:-webkit-flex;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:left;
+	margin:0;
+	padding:0;
+	width:100%
+}
+#netbar .netbar-box {
+	flex:0 0 auto;
+	height:30px;
+	line-height:2.5em;
+	padding:0 .5em
+}
+#netbar .netbar-box.left {
+	border-right:1px solid #D8D8D8
+}
+#netbar .netbar-box.right {
+	border-left:1px solid #D8D8D8
+}
+#netbar .netbar-spacer {
+	flex:1 1 auto
+}
+#netbar a {
+	color:#000;
+	text-decoration:none
+}
+#netbar .netbar-box.logo {
+	transition:width 500ms;
+	width:104px
+}
+#netbar .netbar-box.logo a {
+	background-image:linear-gradient(transparent,transparent),url(/skins/Vector/images/netbar/logo.svg);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background:url(/skins/Vector/images/netbar/logo-fallback.png);
+	display:block;
+	overflow:hidden;
+	text-indent:-500px;
+	transition:width 500ms;
+	white-space:nowrap;
+	width:104px
+}
+@media screen and (max-width:700px) {
+	#netbar .netbar-box.logo,#netbar .netbar-box.logo a {
+	width:24px
+}
+}#netbar span.label-development {
+	color:red;
+	font-weight:700
+}
+#netbar span.label-hostname {
+	color:#ff0;
+	font-weight:700
+}
+#netbar .netbar-box.officialwiki a,#netbar .netbar-box.officialwiki img {
+	display:block;
+	margin-top:.6em;
+	height:15px;
+	width:75px
+}
+@media screen and (max-width:700px) {
+	#netbar .netbar-box.user > a {
+	height:30px;
+	overflow:hidden;
+	width:20px
+}
+}
